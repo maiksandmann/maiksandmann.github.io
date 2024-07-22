@@ -4,7 +4,7 @@
 
 #layout: home
 layout: page
-title: homepage
+title: HOMEPAGE
 ---
 
 
