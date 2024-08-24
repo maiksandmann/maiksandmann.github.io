@@ -1,0 +1,13 @@
+{
+  "name": "maiksandmann.githup.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "jekyll serve --livereload -I --config '_config.yml'",
+    "build": "jekyll build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
