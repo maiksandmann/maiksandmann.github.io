@@ -1,7 +1,9 @@
 ---
+
 layout: post
-title: "News of ATROPOSS in June 2024"
-categorie: NEWS
+title:  "News of ATROPOSS in June 2024"
+date:   2024-03-25 08:30:40 +0200
+categories: NEWS
 ---
 
 # New about the upcoming ATROPOSS release

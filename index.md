@@ -61,36 +61,14 @@ layout: page
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 <br>
-<br>
-<br>
-
-<h2>Submit a GitHub Issue</h2>
-<form id="issueForm">
-<label for="title">Title:</label><br>
-<input type="text" id="title" name="title" required><br><br>
-<label for="body">Description:</label><br>
-<textarea id="body" name="body" required></textarea><br><br>
-<button type="submit">Submit Issue</button>
-</form>
-
-<script>
-document.getElementById('issueForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const title = encodeURIComponent(document.getElementById('title').value);
-    const body = encodeURIComponent(document.getElementById('body').value);
-    const repo = 'maiksandmann/maiksandmann.github.io'; // Replace with your repository
-    const url = `https://github.com/${repo}/issues/new?title=${title}&body=${body}`;
-    window.location.href = url;
-    });
-</script>
-
-
-<br>
-<br>
-
 
 
 <a href="https://www.atroposs.com"><img src="/picture/atroposs_logo.png" alt="ATROPOSS logo" widht=150 height=150></a>
+
+
+<br>
+<br>
+
 
 <h2> Overview of ATROPOSS </h2>
 
@@ -159,6 +137,52 @@ email, or any other method with the ATROPOSS community before making a change. R
 </div>
 
 
-</body>
+<br>
+<br>
+<b>News around ATROPOSS are listed in Posts or can find here too:</b>
+<br>
+<ul>
+{% for post in site.categories.NEWS %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+<br>
+<br>
 
-</html>
+
+<style>
+    #title {
+        width: 300px;
+        height: 40px;
+    }
+    #body {
+        width: 500px;
+        height: 100px;
+    }
+</style>
+
+<h2>Any feedback via GitHub Issue is highly appreciated! Thanks in advance.</h2>
+<form id="issueForm">
+<label for="title">Title:</label><br>
+<input type="text" id="title" name="title" required><br><br>
+<label for="body">Description:</label><br>
+<textarea id="body" name="body" required ></textarea><br><br>
+<button type="submit">Submit Issue</button>
+</form>
+
+<script>
+document.getElementById('issueForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const title = encodeURIComponent(document.getElementById('title').value);
+    const body = encodeURIComponent(document.getElementById('body').value);
+    const repo = 'maiksandmann/maiksandmann.github.io'; // Replace with your repository
+    const url = `https://github.com/${repo}/issues/new?title=${title}&body=${body}`;
+    window.location.href = url;
+    });
+</script>
+
+
+<br>
+<br>
+
+
